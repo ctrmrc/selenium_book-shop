@@ -1,7 +1,7 @@
-from pages.locators import BasePageLocators
-from pages.base_page import BasePage
-from pages.locators import LoginPageLocators
-from pages.login_page import LoginPage
+from .pages.locators import BasePageLocators
+from .pages.base_page import BasePage
+from .pages.locators import LoginPageLocators
+from .pages.login_page import LoginPage
 
 def test_guests_can_go_to_login_page(driver):
     url = BasePageLocators.MAIN_PAGE_LINK
