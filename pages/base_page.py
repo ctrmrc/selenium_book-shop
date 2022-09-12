@@ -21,3 +21,8 @@ class BasePage(object):
     def go_to_login_page(self):
         self.driver.find_element(*LoginPageLocators.GO_TO_LOGIN_PAGE_BUTTON).click()
 
+    def login_page_has_loggin_in_the_link(self):
+        link_now = self.driver.current_url
+        assert '/login/' in str(link_now), 'There is must be login in URL'
+
+        

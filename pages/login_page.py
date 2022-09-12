@@ -3,10 +3,6 @@ from .locators import LoginPageLocators
 import time
 
 class LoginPage(BasePage):
-    def login_page_has_loggin_in_the_link(self):
-        link_now = self.driver.current_url
-        assert '/login/' in str(link_now), 'There is must be login in URL'
-
     def email_n_password_gen(self):
         return (str(time.time()) + '@fakemail.org', 'Pass_6789')
 

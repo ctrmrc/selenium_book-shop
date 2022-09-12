@@ -9,13 +9,12 @@ def test_guests_can_go_to_login_page(driver):
     page.open()
 
     page.go_to_login_page()
+    page.login_page_has_loggin_in_the_link()
 
 def test_guests_can_registrate(driver):
     url = LoginPageLocators.LOGIN_PAGE_LINK
     page = LoginPage(driver, url)
     page.open()
-
-    page.login_page_has_loggin_in_the_link()
 
     email, password = page.email_n_password_gen()
 
