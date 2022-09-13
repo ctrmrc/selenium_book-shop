@@ -5,7 +5,6 @@ from .pages.locators import LoginPageLocators
 from .pages.login_page import LoginPage
 
 class TestAbs(unittest.TestCase):
-    @Test
     @TestCase(key = "ZJ-T1")
     def test_guests_can_go_to_login_page(driver):
         url = BasePageLocators.MAIN_PAGE_LINK
@@ -15,7 +14,6 @@ class TestAbs(unittest.TestCase):
         page.go_to_login_page()
         page.login_page_has_loggin_in_the_link()
 
-    @Test
     @TestCase(key = "ZJ-T2")
     def test_guests_can_registrate(driver):
         url = LoginPageLocators.LOGIN_PAGE_LINK
